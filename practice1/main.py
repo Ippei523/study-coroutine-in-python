@@ -17,6 +17,7 @@ from say_after import say_after
 #     print(f"finished at {time.strftime('%X')}")
 
 async def main():
+    # タスクグループを使うと、複数のタスクを同時に実行できる
     async with asyncio.TaskGroup() as tg:
         tg.create_task(say_after(1, 'hello'))
         tg.create_task(say_after(2, 'world'))
