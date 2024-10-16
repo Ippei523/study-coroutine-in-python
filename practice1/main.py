@@ -7,15 +7,6 @@ from say_after import say_after
 #     await say_after(1, 'hello')
 #     await say_after(2, 'world')
 
-# async def main():
-#     task1 = asyncio.create_task(say_after(1, 'hello'))
-#     task2 = asyncio.create_task(say_after(2, 'world'))
-    
-#     print(f"started at {time.strftime('%X')}")
-#     await task1
-#     await task2
-#     print(f"finished at {time.strftime('%X')}")
-
 async def main():
     # タスクグループを使うと、複数のタスクを同時に実行できる
     async with asyncio.TaskGroup() as tg:
